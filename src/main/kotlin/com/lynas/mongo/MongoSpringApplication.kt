@@ -36,7 +36,14 @@ data class Customer(
     val name: String,
     @Indexed(unique = true)
     val email: String
-)
+) {
+    object CustomerFields {
+        const val TABLE = "customer"
+        const val ID = "_id"
+        const val NAME = "name"
+        const val EMAIL = "email"
+    }
+}
 
 @Document("orders")
 data class Order(
@@ -68,7 +75,7 @@ class CustomCustomerOrderService(
                 .and("orders.amount").`as`("orderAmount")
         )
 
-        val results = mongoTemplate.aggregate(aggregation, "customer", CustomerOrderDTO::class.java)
+        val results = mongoTemplate.aggregate(aggregation, Customer.CustomerFields.TABLE, CustomerOrderDTO::class.java)
         return results.mappedResults
     }
 
