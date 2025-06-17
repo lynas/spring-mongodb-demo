@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "5db46e31-929e-487a-a452-fff11e1287e1",
+		"name": "Spring-MongoDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "14048537",
+		"_collection_link": "https://sazzad-team.postman.co/workspace/demo~f57fbe73-0b73-4b15-b227-cc7f24288474/collection/14048537-5db46e31-929e-487a-a452-fff11e1287e1?action=share&source=collection_link&creator=14048537"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/customers",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/customers"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/customers",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"sazzad islam\",\r\n    \"email\": \"sazzadislam3@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/customers"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/customers/4b305ed2-ae90-4b67-9440-ae7f7c8cdeb7",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Safira\",\r\n    \"email\": \"Safira@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/customers/4b305ed2-ae90-4b67-9440-ae7f7c8cdeb7"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/customers/customerAndOrders",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/customers/customerAndOrders"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/customers/customerOrder",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"4b305ed2-ae90-4b67-9440-ae7f7c8cdeb1\",\r\n    \"customerId\":\"4b305ed2-ae90-4b67-9440-ae7f7c8cdeb6\",\r\n    \"amount\": 200\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/customers/customerOrder"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/customers/orders",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/customers/orders"
+			},
+			"response": []
+		}
+	]
+}
